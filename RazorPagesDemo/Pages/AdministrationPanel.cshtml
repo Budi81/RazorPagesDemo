@@ -6,6 +6,13 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to Admin your shop.</p>
+
+<button type="button" class="btn btn-primary" @onclick="Model.OnClick()">Show All</button>
+<button>Add Book</button>
+<button>Delete Book</button>
+<button>Find Book</button>
+
+
 @foreach (var item in Model.Books)
 {
     <tr>

@@ -18,12 +18,12 @@ namespace RazorPagesDemo.Data
         }
         void IRepository.AddBook(Book book)
         {
-            throw new NotImplementedException();
+            books.Add(book);
         }
 
         void IRepository.DeleteBook(Book book)
         {
-            throw new NotImplementedException();
+            books.Remove(book);
         }
 
         List<Book> IRepository.GetAllBooks()
@@ -33,7 +33,7 @@ namespace RazorPagesDemo.Data
 
         Book IRepository.GetById(int id)
         {
-            throw new NotImplementedException();
+            return books.FirstOrDefault(b => b.Id == id);
         }
 
         void IRepository.UpdateBook(Book book)

@@ -21,6 +21,11 @@ namespace RazorPagesDemo.Pages
 
         public void OnGet()
         {
+            Books = new List<Book>();
+        }
+
+        public void OnClick()
+        {
             Books = _repository.GetAllBooks();
         }
     }
