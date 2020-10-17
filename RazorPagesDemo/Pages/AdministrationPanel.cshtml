@@ -1,0 +1,20 @@
+﻿@page
+@model RazorPagesDemo.Pages.AdministrationPanelModel
+@{
+    ViewData["Title"] = "Administration Panel";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to Admin your shop.</p>
+@foreach (var item in Model.Books)
+{
+    <tr>
+        <td>(@item.Title)</td>
+        <td>(@item.Author)</td>
+        <td>(@item.Category)</td>
+        <td>(@item.DateOfPublish)</td>
+        <td>(@item.Description)</td>
+        <td>(@item.Stock)</td>
+        <td>(@item.ISBN)</td>
+    </tr>
+}
